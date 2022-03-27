@@ -1,0 +1,24 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Frame Particle RP.",
+        "name": "Frame Particle",
+        "uuid": "ee9509d2-abd0-4355-b79c-56a406c13350",
+        "version": [0, 0, 1],
+        "min_engine_version": [ 1, 18, 10 ]
+    },
+    "modules": [
+        {
+            "description": "Frame Particle RP.",
+            "type": "resources",
+            "uuid": "2d1f5012-52e0-483a-9a30-b49459770b7b",
+            "version": [0, 0, 1]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "db571d98-0784-4d46-a57c-054f93510cf6",
+            "version": [0, 0, 1]
+        }
+    ]
+}
