@@ -1,3 +1,4 @@
+/*LICENSE : https://github.com/moonstera/FrameParticle/blob/main/LICENSE*/
 import {
   world,
   Location,
