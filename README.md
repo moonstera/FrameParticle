@@ -39,6 +39,3 @@ world.events.itemUse.subscribe(event => {
 
 ### delete
 ```delete(): void```  
-
-### delete
-```delete(): void```  
