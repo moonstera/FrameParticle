@@ -66,9 +66,9 @@ Returns FrameParticle
   解決法: 
     1. パーティクルの寿命を長くする。(ただし残像が残りやすい) 
     2. 一定の長さのパーティクルを並べる。(ただし使用パーティクル数が増える)  
-  解決法iを施し寿命は0.5にしています。それでも点滅が激しい場合はもう少し寿命を延ばすことをお勧めします。
-  `FrameParticleRP/particles/frame_down_up`, `FrameParticleRP/particles/frame_north_south`, `FrameParticleRP/particles/west_east`の
-  `minecraft:particle_lifetime_expression`にある`max_lifetime`の値を変更すればできます。  
+解決法iを施し寿命は0.5にしています。それでも点滅が激しい場合はもう少し寿命を延ばすことをお勧めします。
+`FrameParticleRP/particles`フォルダにある、`frame_down_up.json, frame_north_south.json, frame_west_east.json`の
+`minecraft:particle_lifetime_expression`内の`max_lifetime`の値を変更すればできます。  
 
 ## 連絡先  
  [twitter](https://twitter.com/momonstera)
