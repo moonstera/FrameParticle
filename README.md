@@ -39,7 +39,7 @@ Type: Location
 
 ## Methods
 ### コンストラクタ  
-```new FrameParticle(dimension: Dimension, location1: Location, location2: Location)``` 
+```new FrameParticle(dimension: Dimension, location1: Location, location2: Location)```  
 新しくFrameParticleオブジェクトを作る  
 Returns FrameParticle  
 
