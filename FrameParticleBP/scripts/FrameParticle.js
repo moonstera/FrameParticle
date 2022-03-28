@@ -27,11 +27,10 @@ export class FrameParticle {
     this.loc1 = new Location(Math.floor(loc1.x), Math.floor(loc1.y), Math.floor(loc1.z));
     this.loc2 = new Location(Math.floor(loc2.x), Math.floor(loc2.y), Math.floor(loc2.z));
     this.moving = 0;  //0: false, 1~: true  //座標が変更されたときの残像を軽減するため
-    this.id = -1;  
+    this.id = FrameParticle.particle_id++;
   }
 
   show(){
-    this.id = FrameParticle.particle_id++;
     FrameParticle.frame_particles.set(this.id, this);
     return this;
   }
