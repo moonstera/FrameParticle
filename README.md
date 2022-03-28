@@ -65,10 +65,10 @@ Returns FrameParticle
 - 範囲が大きいいとき、一辺の中心が視界外にありかつ数メートル離れている場合、その辺が点滅する。
   解決法: 
     1. パーティクルの寿命を長くする。(ただし残像が残りやすい) 
-    2. 一定の長さのパーティクルを並べる。(ただし使用パーティクル数が増える)
+    2. 一定の長さのパーティクルを並べる。(ただし使用パーティクル数が増える)  
   解決法iを施し寿命は0.5にしています。それでも点滅が激しい場合はもう少し寿命を延ばすことをお勧めします。
   `FrameParticleRP/particles/frame_down_up`, `FrameParticleRP/particles/frame_north_south`, `FrameParticleRP/particles/west_east`の
-  `minecraft:particle_lifetime_expression`にある`max_lifetime`の値を変更すればできます。
+  `minecraft:particle_lifetime_expression`にある`max_lifetime`の値を変更すればできます。  
 
 ## 連絡先  
  [twitter](https://twitter.com/momonstera)
