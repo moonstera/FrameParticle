@@ -1,6 +1,6 @@
 # FrameParticle.js
  ストラクチャーの枠のようなパーティクルを生成することができるクラスを追加します。  
- [パーティクル](https://i.imgur.com/qFfWQiF.png, "パーティクル")  
+ ![パーティクル](https://i.imgur.com/qFfWQiF.png, "パーティクル")  
 
 ## 導入方法  
   1. Releasesからzipファイルをダウンロードし解凍してください  
