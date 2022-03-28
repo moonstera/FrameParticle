@@ -31,7 +31,9 @@ export class FrameParticle {
   }
 
   show(){
-    FrameParticle.frame_particles.set(this.id, this);
+    if(!FrameParticle.frame_particles.has(this.id)){
+      FrameParticle.frame_particles.set(this.id, this);
+    }
     return this;
   }
 
@@ -72,7 +74,7 @@ export class FrameParticle {
   }
 
   delete(){
-    if(this.id != -1)FrameParticle.frame_particles.delete(this.id);
+    if(FrameParticle.frame_particles.has(this.id))FrameParticle.frame_particles.delete(this.id);
   }
 
 }
