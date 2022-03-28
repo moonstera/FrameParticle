@@ -19,23 +19,41 @@ world.events.itemUse.subscribe(event => {
 ```
 
 ## 使い方
+指定したディメンションと二つの座標をから枠パーティクルを生成する  
 
 ## Properties
 ### dimension  
 ```read-only dimension: Dimension;```  
+このパーティクルのディメンションを返す  
+Type: Dimension  
 
 ### location1  
 ```location1: Location;```  
+このパーティクルの一つ目の座標を返す  
+Type: Location  
 
 ### location2  
 ```location2: Location;```  
+このパーティクルの二つ目の座標を返す  
+Type: Location  
 
 ## Methods
 ### コンストラクタ  
-```new FrameParticle(dimension: Dimension, location1: Location, location2: Location)```  
+```new FrameParticle(dimension: Dimension, location1: Location, location2: Location)``` 
+新しくFrameParticleオブジェクトを作る  
+Returns FrameParticle  
 
 ### show
 ```show(): FrameParticle```  
+このパーティクルを表示する  
+Returns FrameParticle  
 
 ### delete
 ```delete(): void```  
+このパーティクルを削除する  
+
+## 使用例  
+
+## 既知の不具合  
+
+## 連絡先  
