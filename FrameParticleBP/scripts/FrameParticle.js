@@ -8,7 +8,7 @@ import {
 } from "mojang-minecraft";
 
 export class FrameParticle {
-  static _particle_id = 0;
+  static #_particle_id = 0;
   static _frame_particles = new Map();
 
   constructor(dim, loc1, loc2){
@@ -27,13 +27,11 @@ export class FrameParticle {
     this._loc1 = new Location(Math.floor(loc1.x), Math.floor(loc1.y), Math.floor(loc1.z));
     this._loc2 = new Location(Math.floor(loc2.x), Math.floor(loc2.y), Math.floor(loc2.z));
     this._moving = 0;  //0: false, 1~: true  //座標が変更されたときの残像を軽減するため
-    this._id = FrameParticle._particle_id++;
+    this._id = FrameParticle.#_particle_id++;
   }
 
   show(){
-    if(!FrameParticle._frame_particles.has(this._id)){
-      FrameParticle._frame_particles.set(this._id, this);
-    }
+    FrameParticle._frame_particles.set(this._id, this);
     return this;
   }
 
@@ -74,16 +72,16 @@ export class FrameParticle {
   }
 
   delete(){
-    if(FrameParticle._frame_particles.has(this._id))FrameParticle._frame_particles.delete(this._id);
+    return FrameParticle._frame_particles.delete(this._id);
   }
 
 }
 
 world.events.tick.subscribe(() => {
   FrameParticle._frame_particles.forEach((particle, id) => {
-    let x = Math.min(particle.location1.x, particle.location2.x);
-    let y = Math.min(particle.location1.y, particle.location2.y);
-    let z = Math.min(particle.location1.z, particle.location2.z);
+    let x = particle.location1.x < particle.location2.x ? particle.location1.x : particle.location2.x;
+    let y = particle.location1.y < particle.location2.y ? particle.location1.y : particle.location2.y;
+    let z = particle.location1.z < particle.location2.z ? particle.location1.z : particle.location2.z;
 
     let size_x = Math.abs(particle.location1.x - particle.location2.x)+1;
     let size_y = Math.abs(particle.location1.y - particle.location2.y)+1;
