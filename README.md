@@ -50,8 +50,9 @@ Returns FrameParticle
 Returns FrameParticle  
 
 ### delete
-```delete(): void```  
+```delete(): boolean```  
 このパーティクルを削除する  
+Returns boolean 
 
 ## 特徴  
 このパーティクルは指定された範囲の大きさによってサイズを変更させているため、範囲の大きさによって必要なパーティクル数が変わりません。  
